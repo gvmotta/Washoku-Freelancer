@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'MrsEavesSmallCapsRoman';
+    src: url('fonts/MrsEavesSmallCaps/mrseavessmallcaps-webfont.woff2') format('woff2'),
+         url('fonts/MrsEavesSmallCaps/mrseavessmallcaps-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'MrsEavesSmallCapsRoman';
+    color: #e5e5e5;
+}
+
+body {
+    background-color: #1a1a1b!important;
+}
+
+
+p, span, form, label, input, small, li, ul {
+    font-family: 'Roboto';
+}
+
+.hero-header {
+  background-repeat: no-repeat;
+  object-fit: cover;  
+  background: url(../img/background-hero1.jpg), lightgray 50% / cover no-repeat;
+}
+
+@media (max-width: 992px) {
+  .hero-header {
+    background-size: 160% 100%;
+  }
+}
+
+.text-logo h3 {
+    font-size: 20px;
+    line-height: 96%;
+    letter-spacing: 0.48px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.logo-hero img {
+    height: 100px;
+}
+
+.btn {
+    background: #8B0000!important;
+    color: #FFF!important;
+    text-align: center!important;
+    font-family: Roboto!important;
+    font-size: 16px!important;
+    font-style: normal!important;
+    font-weight: 00!important;
+    line-height: 100%!important;
+    width: 100%!important;
+    letter-spacing: .5px!important;
+    border-radius: 10px!important;
+    height: calc(2.25rem + 7px)!important;
+    border: #7a0000!important;
+}
+
+.btn:hover {
+  border-color: #440000!important
+}
+
+.logo-text {
+    font-weight: 100;
+    line-height: 90%; 
+    font-size: 46px; 
+}
+
+.form-group {
+    font-family: 'Roboto';
+    height: 110%;
+}
+
+.form-control {
+    border-radius: 10px!important;
+    color: rgba(0, 0, 0, .6);
+    background-color: #D9D9D9!important;
+    font-size: 14px!important;
+    font-weight: 500!important;
+    height: calc(2.25rem + 7px)!important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-control-lg {
+  border-radius: 10px!important;
+  color: rgba(0, 0, 0, .6);
+  background-color: #D9D9D9!important;
+  padding: 1rem!important;
+  font-size: 14px!important;
+  font-weight: 500!important;
+  height: auto!important;
+  width: 100%;
+}
+
+.about-school h2 {
+    color: white;
+}
+
+.about-school p {
+    color: white;
+}
+
+.about-school img { 
+    border-radius: .3rem;
+}
+
+.card1 {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative!important;
+    background-color: black!important;
+    overflow: hidden!important;
+    text-align: center!important;
+    border: none!important;
+    border-radius: 10px!important;
+    height: 350px!important; /* Ajuste a altura conforme necessário */
+    cursor: pointer!important;
+  }
+  .card1:hover {
+    transform: translateY(-10px)!important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)!important;
+  }
+  .card-title {
+    position: absolute!important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin: 0;
+    transform: translateY(-60%);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .card1:hover .card-title {
+    transform: translateY(-70%);
+  }
+  .card1:hover {
+    transform: translateY(-10px);
+  }
+  .card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 25.31%, #000 100%);
+  }
+  .arrow-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.2rem;
+    color: white;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .card1:hover .arrow-icon {
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  .image-text-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .image-container {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .text-container {
+    flex: 2;
+    padding-left: 20px;
+  }
+  .text-container h2 {
+    margin-top: 0;
+  }
+
+.courses {
+  line-height: 1.3;
+}
+
+.courses   li {
+    margin-left: 20px;
+  }
+
+.img-course {
+  height: 100vh;
+}
+
+@media (max-width: 767px){
+    .img-course {
+        height: auto;
+    }
+}
+
+.beneficios {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  background-color: #6b2e2e !important;
+  overflow: hidden;
+  text-align: center;
+  border: none!important;
+  border-radius: 10px!important;
+  height: 280px; /* Ajuste a altura conforme necessário */
+}
+
+.gradient-overlay-beneficts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(26, 26, 27, 1) 100%);
+}
+
+.svg {
+  height: 70%;
+}
+
+.title-card-beneficios {
+  font-size: 20px;
+}
+
+  
+
+.img-form {
+  object-fit: contain!important;
+}
+
+.label ,.form-label {
+  margin-bottom: 0!important;
+  font-size: 14px;
+}
+
+.form-check {
+  margin-left: 5px;
+}
+
+option {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+textarea {
+  font-family: 'Roboto', sans-serif!important;
+}
+
+.slick-dots li button:before {
+  color: white!important;
+}
