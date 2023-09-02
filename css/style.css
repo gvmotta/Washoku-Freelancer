@@ -15,6 +15,7 @@
 
 body {
     background-color: #0f0f0f!important;
+    overflow-x: hidden!important;
 }
 
 
@@ -267,14 +268,46 @@ textarea {
 }
 
 /* Mini Card */
-.mini-card {
+.card {
   background-color: red;
   text-align: center;
   border-radius: 8px;
+  width: 100%;
+  padding: 30px 40px;
+
+  background: linear-gradient(180deg, #713437 0%, rgba(26,26,27,1) 100%);
 }
 
-@media (max-width: 576px) {
-  .card-icon{
-    font-size: 14vw;
+.card-icon {
+  font-size: 8vw;
+  color: white;
+}
+
+.mini-card-title {
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+@media (min-width: 320px) {
+  .card {
+    padding: 30px 20px;
+  }
+  .card-icon {
+    font-size: 15vw;
+  }
+  .mini-card-title {
+    font-size: 14px;
+    height: 80px;
+    white-space: w;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    padding: 30px 40px;
+  }
+  .card-icon {
+    font-size: 80px;
   }
 }
