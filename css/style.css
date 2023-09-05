@@ -300,7 +300,6 @@ textarea {
   .mini-card-title {
     font-size: 14px;
     height: 80px;
-    white-space: w;
   }
 }
 @media (min-width: 768px) {
