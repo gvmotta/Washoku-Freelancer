@@ -27,15 +27,24 @@
                     <h1 class="mb-4 text-lg-left text-center logo-text">Torne-se um Chef Profissinal da gastronomia japonesa em apenas semanas!</h1>
                     <p class="text-md-left text-lg-left text-sm-center">Descubra a <span class="font-weight-bold">Arte da Culinária Japonesa</span> em Tóquio com os Cursos Intensivos de Cozinha Washoku!</p>
                     <p class="font-weight-bold text-md-left text-lg-left text-sm-center">Evento 100% Presencial em Tokyo</p>
-                    <form id="form1" action="">
+                    <!-- <form id="form1">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="nome" aria-describedby="nameHelp" placeholder="Nome Completo">
+                            <input name="nome" type="text" class="form-control" id="nome" aria-describedby="nameHelp" placeholder="Nome Completo">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
                         </div>
-                        <a><button onclick="copiarDados(), redirectToSection('section5')" type="submit" class="btn">Eu quero mais informações!</button></a>
-                    </form>
+                        <button id="copiarDados" type="submit" class="btn">Eu quero mais informações!</button>
+                    </form> -->
+                    <form id="form1">
+                      <div class="form-group">
+                        <input class="form-control" type="text" id="nome" name="nome"  aria-describedby="nameHelp" placeholder="Nome Completo">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                      </div>
+                      <button class="btn" type="button" id="copiarDados">Eu quero mais informações!</button>
+                  </form>
                 </div>
                 <div class="col-lg-6 col-sm-12 align-self-end text-center text-lg-end">
                     <img class="img-fluid" src="img/omg.png" alt="">
@@ -285,14 +294,14 @@
       <img class="img-fluid img-form" src="img/img-form.png" alt="">
     </div>
     <div class="form col-md-6 col-sm-12">
-      <form id="section5">
+      <form id="form2">
         <div class="mb-3">
-          <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" placeholder="Digite seu nome completo" id="nome2" name="nome" required>
+          <label for="nome2" class="form-label">Nome:</label>
+          <input type="text" class="form-control" id="nome2" name="nome2" placeholder="Digite seu nome completo">
         </div>
         <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" placeholder="Digite seu melhor e-mail" id="email2" name="email" required>
+          <label for="email2" class="form-label">Email:</label>
+          <input type="text" class="form-control" id="email2" name="email2" placeholder="Digite seu melhor e-mail">
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12">
@@ -314,20 +323,20 @@
           </div>
         </div>
         <div class="mb-3">
-          <label for="nome" class="form-label">Endereço:</label>
-          <input type="text" class="form-control" placeholder="Endereço" id="nome" name="nome" required>
+          <label for="" class="form-label">Endereço:</label>
+          <input type="text" class="form-control" placeholder="Endereço" id="" name="nome" required>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div class="mb-3">
-              <label for="nome" class="form-label">Estado:</label>
-              <input type="text" class="form-control" placeholder="Estado" id="nome" name="nome" required>
+              <label for="" class="form-label">Estado:</label>
+              <input type="text" class="form-control" placeholder="Estado" id="" name="nome" required>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="mb-3">
-              <label for="nome" class="form-label">Cidade:</label>
-              <input type="text" class="form-control" placeholder="Cidade" id="nome" name="nome" required>
+              <label for="" class="form-label">Cidade:</label>
+              <input type="text" class="form-control" placeholder="Cidade" id="" name="nome" required>
             </div>
           </div>
         </div>
@@ -362,6 +371,7 @@
 
 <!-- jQuery links-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Bootstrap Links -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>

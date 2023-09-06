@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form1">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <br>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <br>
+        <button type="button" id="copiarDados">Copiar Dados</button>
+    </form>
+      
+      <!-- Formulário 2 (onde os dados serão exibidos) -->
+      <form id="form2">
+        <label for="email2">Email:</label>
+        <input type="text" id="email2" name="email2">
+        <br>
+        <label for="nome2">Nome:</label>
+        <input type="text" id="nome2" name="nome2">
+      </form>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          $("#copiarDados").click(function() {
+            // Obtenha os valores dos campos de form1
+            var email = $("#email").val();
+            var nome = $("#nome").val();
+      
+            // Defina os valores nos campos de form2
+            $("#email2").val(email);
+            $("#nome2").val(nome);
+          });
+        });
+      </script>
+</body>
+</html>

@@ -42,13 +42,16 @@ $('.galeria-img').slick({
     window.location.hash = hash;
 }
 
-  function copiarDados() {
+$(document).ready(function() {
+  $("#copiarDados").click(function() {
     // Obtenha os valores dos campos de form1
-    var email = document.getElementById("email").value;
-    var nome = document.getElementById("nome").value;
+    var email = $("#email").val();
+    var nome = $("#nome").val();
 
     // Defina os valores nos campos de form2
-    document.getElementById("email2").value = email;
-    document.getElementById("nome2").value = nome;
-  }
-
+    $("#email2").val(email);
+    $("#nome2").val(nome);
+    const hash = `#form2`;
+    window.location.hash = hash;
+  });
+});
