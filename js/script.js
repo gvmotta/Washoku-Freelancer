@@ -41,3 +41,14 @@ $('.galeria-img').slick({
     // Define o hash no URL, levando à seção desejada
     window.location.hash = hash;
 }
+
+  function copiarDados() {
+    // Obtenha os valores dos campos de form1
+    var email = document.getElementById("email").value;
+    var nome = document.getElementById("nome").value;
+
+    // Defina os valores nos campos de form2
+    document.getElementById("email2").value = email;
+    document.getElementById("nome2").value = nome;
+  }
+

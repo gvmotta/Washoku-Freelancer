@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head> 
 <body>
-    <div class="container-fluid hero-header gradient-overlay-hero">
+    <div class="hero-header gradient-overlay-hero">
         <div class="container">
             <div class="row g-5 pt-2">
                 <div class="col-lg-6 col-sm-12 mb-lg-5">
@@ -25,17 +25,17 @@
                         </div>
                     </div>
                     <h1 class="mb-4 text-lg-left text-center logo-text">Torne-se um Chef Profissinal da gastronomia japonesa em apenas semanas!</h1>
-                    <p>Descubra a <span class="font-weight-bold">Arte da Culinária Japonesa</span> em Tóquio com os Cursos Intensivos de Cozinha Washoku!</p>
-                    <p class="font-weight-bold">Evento 100% Presencial em Tokyo</p>
-                    <form action="">
+                    <p class="text-md-left text-lg-left text-sm-center">Descubra a <span class="font-weight-bold">Arte da Culinária Japonesa</span> em Tóquio com os Cursos Intensivos de Cozinha Washoku!</p>
+                    <p class="font-weight-bold text-md-left text-lg-left text-sm-center">Evento 100% Presencial em Tokyo</p>
+                    <form id="form1" action="">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Nome Completo">
+                            <input type="text" class="form-control" id="nome" aria-describedby="nameHelp" placeholder="Nome Completo">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
                         </div>
+                        <a><button onclick="copiarDados(), redirectToSection('section5')" type="submit" class="btn">Eu quero mais informações!</button></a>
                     </form>
-                    <a><button type="submit" class="btn">Eu quero mais informações!</button></a>
                 </div>
                 <div class="col-lg-6 col-sm-12 align-self-end text-center text-lg-end">
                     <img class="img-fluid" src="img/omg.png" alt="">
@@ -44,8 +44,8 @@
         </div>
     </div>  
 
-    <div class="container-fluid about-school">
-        <div class="container">
+    <div class="container">
+        <div class="about-school">
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 col-sm-12 d-flex justify-content-sm-center mb-sm-5">
                     <img src="img/about-school.jpg" alt="" class="img-fluid pb-3">
@@ -60,27 +60,27 @@
         </div>
     </div>
 
-    <div class="container mt-5 mb-5">
+    <div class="container mt-5">
       <div class="row">
-        <div class="card card-courses col-md-3 col-sm-12 mb-sm-4" onclick="redirectToSection('section1')">
+        <div class="card card-courses col-md-3 m-auto col-sm-12" onclick="redirectToSection('section1')">
           <img src="img/course1.png" class="card-img-top" alt="Card Image">
           <div class="gradient-overlay"></div>
           <h5 class="card-title">Curso de Sushi</h5>
           <i class="fas fa-chevron-up arrow-icon"></i>
         </div>
-        <div class="card card-courses col-md-3 col-sm-12 mb-sm-4" onclick="redirectToSection('section2')">
+        <div class="card card-courses col-md-3 m-auto col-sm-12" onclick="redirectToSection('section2')">
           <img src="img/course2.png" class="card-img-top" alt="Card Image">
           <div class="gradient-overlay"></div>
           <h5 class="card-title">Curso de Yakitori</h5>
           <i class="fas fa-chevron-up arrow-icon"></i>
         </div>
-        <div class="card card-courses col-md-3 col-sm-12 mb-sm-4" onclick="redirectToSection('section3')">
+        <div class="card card-courses col-md-3 m-auto col-sm-12" onclick="redirectToSection('section3')">
           <img src="img/course3.png" class="card-img-top" alt="Card Image">
           <div class="gradient-overlay"></div>
           <h5 class="card-title">Curso de Ramen</h5>
           <i class="fas fa-chevron-up arrow-icon"></i>
         </div>
-        <div class="card card-courses col-md-3 col-sm-12 mb-sm-4" onclick="redirectToSection('section4')">
+        <div class="card card-courses col-md-3 m-auto col-sm-12" onclick="redirectToSection('section4')">
           <img src="img/course4.png" class="card-img-top" alt="Card Image">
           <div class="gradient-overlay"></div>
           <h5 class="card-title">Curso Completo</h5>
@@ -231,32 +231,34 @@
         </div>
       </div>
 
-<h2 class="px-2 text-center text-white" style="font-family: 'MrsEavesSmallCapsRoman';">Por que  fazer o curso intensivo de cozinha Washoku?</h2>
+<h2 class="px-2 text-center text-white w-75 m-auto" style="font-family: 'MrsEavesSmallCapsRoman';">Por que fazer o curso intensivo de cozinha Washoku?</h2>
 <div class="container d-flex">
-  <div class="row py-5" style="margin: 0 auto;">
+  <div class="row py-5 m-auto">
+    
     <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
       <div class="card-div">
-        <div class="card-icon"><i class="fa-solid fa-star"></i></div>
-        <h5 class="mini-card-title">Instrutores Renomados</h5>
+        <div class="card-icon"><img class="turmas-img" src="img/icons/star.svg" alt=""></div>
+        <h5 class="mini-card-title align-items-center d-flex justify-content-center">Instrutores Renomados</h5>
       </div>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
       <div class="card-div">
-        <div class="card-icon"><img class="image-fluid" src="img/icons/trad.svg" alt=""></div>
-        <h5 class="mini-card-title">Dispositivo de tradução simultânea</h5>
+        <div class="card-icon"><img class="courses-img" src="img/icons/trad.svg" alt=""></div>
+        <h5 class="mini-card-title align-items-center d-flex justify-content-center">Dispositivo de tradução simultânea</h5>
       </div>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
       <div class="card-div">
-        <div class="card-icon"><i class="fa-solid fa-star"></i></div>
-        <h5 class="mini-card-title">Turmas reduzidas</h5>
+        <div class="card-icon"><img class="turmas-img" src="img/icons/turmas.svg" alt=""></div>
+        <h5 class="mini-card-title align-items-center d-flex justify-content-center">Turmas reduzidas</h5>
       </div>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
       <div class="card-div">
-        <div class="card-icon"><i class="fa-solid fa-star"></i></div>
-        <h5 class="mini-card-title">Aulas práticas e Interativas</h5>
+        <div class="card-icon"><img class="turmas-img" src="img/icons/cap.svg" alt=""></div>
+        <h5 class="mini-card-title align-items-center d-flex justify-content-center">Aulas práticas e Interativas</h5>
       </div>
+    
     </div>
   </div>
   
@@ -283,14 +285,14 @@
       <img class="img-fluid img-form" src="img/img-form.png" alt="">
     </div>
     <div class="form col-md-6 col-sm-12">
-      <form>
+      <form id="section5">
         <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" placeholder="Digite seu nome completo" id="nome" name="nome" required>
+          <input type="text" class="form-control" placeholder="Digite seu nome completo" id="nome2" name="nome" required>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" placeholder="Digite seu melhor e-mail" id="email" name="email" required>
+          <input type="email" class="form-control" placeholder="Digite seu melhor e-mail" id="email2" name="email" required>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12">
