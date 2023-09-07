@@ -341,3 +341,17 @@ textarea {
 .card-courses {
   width: 90%!important;
 }
+
+.loading {
+  width: 32px;
+  animation: spinLoading 1s infinite linear;
+}
+
+@keyframes spinLoading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

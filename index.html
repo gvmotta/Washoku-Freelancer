@@ -307,11 +307,11 @@
           <div class="col-md-6 col-sm-12">
             <div class="mb-3">
               <label for="select" class="form-label">Gênero</label>
-              <select class="d-block form-control" id="select" name="select" required>
+              <select class="d-block form-control" id="select" name="gender" required>
                 <option value="" disabled selected>Selecione...</option>
-                <option value="opcao1">Masculino</option>
-                <option value="opcao2">Feminino</option>
-                <option value="opcao2">Outro</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
               </select>
             </div>
           </div>
@@ -324,38 +324,38 @@
         </div>
         <div class="mb-3">
           <label for="" class="form-label">Endereço:</label>
-          <input type="text" class="form-control" placeholder="Endereço" id="" name="nome" required>
+          <input type="text" class="form-control" placeholder="Endereço" id="" name="endereco" required>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div class="mb-3">
               <label for="" class="form-label">Estado:</label>
-              <input type="text" class="form-control" placeholder="Estado" id="" name="nome" required>
+              <input type="text" class="form-control" placeholder="Estado" id="" name="estado" required>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="mb-3">
               <label for="" class="form-label">Cidade:</label>
-              <input type="text" class="form-control" placeholder="Cidade" id="" name="nome" required>
+              <input type="text" class="form-control" placeholder="Cidade" id="" name="cidade" required>
             </div>
           </div>
         </div>
         <div class="mb-3">
           <label class="form-label">Escolha o curso: (É possível escolher mais de 1 curso)</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="radio-courses" id="sushi-course" value="sushi-course" required>
+            <input class="form-check-input" type="checkbox"  id="sushi-course" nome="Sushi" value="sushi-course">
             <label class="form-check-label" for="sushi-course">Curso de Sushi</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="radio-courses" id="yakitori-course" value="yakitori-course" required>
+            <input class="form-check-input" type="checkbox" id="yakitori-course" nome="Yakitori" value="yakitori-course">
             <label class="form-check-label" for="yakitori-course">Curso de Yakitori</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="radio-courses" id="ramen-course" value="ramen-course" required>
+            <input class="form-check-input" type="checkbox" id="ramen-course" nome="Ramen" value="ramen-course">
             <label class="form-check-label" for="ramen-course">Curso de Ramen</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="radio-courses" id="complete-course" value="complete-course" required>
+            <input class="form-check-input" type="checkbox" id="complete-course" nome="Curso-completo" value="complete-course">
             <label class="form-check-label" for="complete-course">Curso Completo</label>
           </div>
         </div>
@@ -363,12 +363,14 @@
           <label for="mensagem" class="form-label">Conte um pouco sobre sua expectativa com o curso:</label>
           <textarea class="form-control-lg" id="mensagem" placeholder="Conte-nos um pouco..." name="mensagem" rows="4" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary mb-5">Eu quero mais informações!</button>
+        <button type="submit" class="btn btn-primary mb-5" id="planilha">Eu quero mais informações!</button>
       </form>
     </div>
     </div>
 </div>
 
+<!-- Luxon Date -->
+<script src="https://cdn.jsdelivr.net/npm/luxon@2.1.3/build/global/luxon.min.js"></script>
 <!-- jQuery links-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

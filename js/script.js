@@ -55,3 +55,44 @@ $(document).ready(function() {
     window.location.hash = hash;
   });
 });
+
+const button = document.querySelector('#planilha');
+const addLoading = () => {
+  button.innerHTML = '<img src="img/loading.png" class="loading">';
+}
+const removeLoading = () => {
+  button.innerHTML = 'Eu quero mais informações!';
+}
+
+const handleSubmit = (event) => {
+  event.preventDefault(); // para não deixar recarregar a página
+  addLoading();
+
+  const data = new Date();
+  const opcoes = {timezone: 'America/Sao_Paulo'};
+  const horaAtual = data.toLocaleTimeString('pt-BR', opcoes);
+  const dataAtual = data.toLocaleDateString('pt-BR', opcoes);
+  const name = document.querySelector('input[name=nome2]').value;
+  const email = document.querySelector('input[name=email2]').value;
+  const date = document.querySelector('input[name=dataNascimento]').value;
+  const endereco = document.querySelector('input[name=endereco]').value;
+  const estado = document.querySelector('input[name=estado]').value;
+  const cidade = document.querySelector('input[name=cidade]').value;
+  const gender = document.querySelector('select[name=gender]').value;
+  const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+  const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
+  const textareaElement = document.querySelector('textarea[name=mensagem]').value;
+  
+  fetch('https://api.sheetmonkey.io/form/k96idJaL2gDuLeu1Ue65L7', {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ 'Horário': (dataAtual+horaAtual), Nome: name, Email: email, 'Data de Nascimento': date,
+    'Endereço': endereco, Estado: estado, Cidade: cidade, 'Gênero': gender, 
+    Cursos: selectedValues, 'Conte um pouco:': textareaElement
+  }),
+  }).then(() => removeLoading(), alert('Dados enviados com sucesso!'));
+}
+document.querySelector('#form2').addEventListener('submit', handleSubmit);
