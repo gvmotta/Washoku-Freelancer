@@ -317,10 +317,28 @@ textarea {
     width: 70%!important;
     margin: 0 auto 20px;
   }
+  .logo-text {
+    font-size: 30px;
+  }
+  .hero-header p {
+    font-size: 14px;
+  }
+  .logo-hero img {
+    height: 70px;
+  }
+  .text-logo h3 {
+    font-size: 18px;
+  }
 }
 @media (min-width: 768px) {
   .card {
     margin: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-header p {
+    text-align: center!important;
   }
 }
 
