@@ -45,7 +45,7 @@ $('.galeria-img').slick({
 $(document).ready(function() {
   $("#copiarDados").click(function() {
     // Obtenha os valores dos campos de form1
-    var email = $("#email").val();
+    var email = $("#email1").val();
     var nome = $("#nome").val();
 
     // Defina os valores nos campos de form2
@@ -72,8 +72,8 @@ const handleSubmit = (event) => {
   const opcoes = {timezone: 'America/Sao_Paulo'};
   const horaAtual = data.toLocaleTimeString('pt-BR', opcoes);
   const dataAtual = data.toLocaleDateString('pt-BR', opcoes);
-  const name = document.querySelector('input[name=nome2]').value;
-  const email = document.querySelector('input[name=email2]').value;
+  const name = document.querySelector('input[name=name]').value;
+  const email = document.querySelector('input[name=email]').value;
   const date = document.querySelector('input[name=dataNascimento]').value;
   const endereco = document.querySelector('input[name=endereco]').value;
   const estado = document.querySelector('input[name=estado]').value;
@@ -83,6 +83,25 @@ const handleSubmit = (event) => {
   const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
   const textareaElement = document.querySelector('textarea[name=mensagem]').value;
   
+  var params = {
+    name: document.getElementById('nome2').value,
+    email: document.getElementById('email2').value,
+    message: document.getElementById('mensagem').value
+  };
+  
+  const serviceID = "service_dgzob2h";
+  const templateID = "template_kag5chc";
+  
+  emailjs.send(serviceID, templateID, params).then(
+    res =>{
+      document.getElementById('nome2').value = "";
+      document.getElementById('email2').value = "";
+      document.getElementById('mensagem').value = "";
+      console.log(res);
+      alert("Mensagem enviada com sucesso!");
+    }
+  )
+
   fetch('https://api.sheetmonkey.io/form/k96idJaL2gDuLeu1Ue65L7', {
     method: 'post',
     headers: {
@@ -96,3 +115,4 @@ const handleSubmit = (event) => {
   }).then(() => removeLoading(), alert('Dados enviados com sucesso!'));
 }
 document.querySelector('#form2').addEventListener('submit', handleSubmit);
+
