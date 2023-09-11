@@ -98,7 +98,6 @@ const handleSubmit = (event) => {
       document.getElementById('email2').value = "";
       document.getElementById('mensagem').value = "";
       console.log(res);
-      alert("Mensagem enviada com sucesso!");
     }
   )
 
@@ -112,7 +111,11 @@ const handleSubmit = (event) => {
     'Endereço': endereco, Estado: estado, Cidade: cidade, 'Gênero': gender, 
     Cursos: selectedValues, 'Conte um pouco:': textareaElement
   }),
-  }).then(() => removeLoading(), alert('Dados enviados com sucesso!'));
+  }).then(() => removeLoading());
+  document.getElementById("popup_container").style.display="block";  
 }
 document.querySelector('#form2').addEventListener('submit', handleSubmit);
 
+function hidePopup(){      
+  document.getElementById("popup_container").style.display="none";      
+}
