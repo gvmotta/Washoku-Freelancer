@@ -28,6 +28,7 @@ p, span, form, label, input, small, li, ul {
   object-fit: cover;
   background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(15,15,15,1) 100%),
   url(../img/background-hero1.jpg);
+  height: 100%!important;
 }
 
 @media (max-width: 992px) {
@@ -35,7 +36,7 @@ p, span, form, label, input, small, li, ul {
     background-size: 160% 100%;
   }
   .card-courses {
-    margin-bottom: 20px!important;
+    margin: 0 auto 20px!important;
   }
 }
 
@@ -73,6 +74,16 @@ p, span, form, label, input, small, li, ul {
     height: 100px;
 }
 
+.first-btn {
+  margin-top: 10px;
+  font-weight: 700!important;
+  font-size: 14px!important;
+}
+
+.first-btn:hover {
+  background: #4d0000!important;
+}
+
 .btn {
     background: #8B0000!important;
     color: #FFF!important;
@@ -90,7 +101,7 @@ p, span, form, label, input, small, li, ul {
 }
 
 .btn:hover {
-  border-color: #440000!important
+  border-color: #440000!important;
 }
 
 .logo-text {
@@ -335,6 +346,13 @@ textarea {
     height: 80px;
   }
 }
+
+@media (min-width: 1200px) {
+  .img-owner {
+    margin-bottom: 23px!important;
+  }
+}
+
 @media (min-width: 768px) {
   .card-div {
     padding: 30px 40px;
@@ -363,7 +381,7 @@ textarea {
     font-size: 18px;
   }
   .card-courses {
-    margin-bottom: 20px;
+    margin: 0 auto 20px!important;
   }
 }
 @media (min-width: 768px) {
@@ -383,7 +401,7 @@ textarea {
 
 @media (max-width: 575px) {
   .card-courses {
-    margin-bottom: 2rem!important;
+    margin: 0 auto 20px!important;
   }
 }
 
@@ -398,13 +416,9 @@ textarea {
     height: 90%!important; 
     object-fit: cover!important;
   }
-  .hero-header {
-    height: 100vh!important;
+  .img-owner {
+    margin-bottom: 23px!important;
   }
-  .hero-header > .container > .row {
-    height: 100vh!important;
-  }
-  
 }
 
 .card-courses {
