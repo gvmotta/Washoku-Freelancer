@@ -35,13 +35,13 @@ $('.galeria-img').slick({
       // instead of a settings object
     ]
   });
-  
-  function redirectToSection(sectionId) {
-    // Cria o hash a partir do ID da seção
-    const hash = `#${sectionId}`;
 
-    // Define o hash no URL, levando à seção desejada
-    window.location.hash = hash;
+function redirectToSection(sectionId) {
+  // Cria o hash a partir do ID da seção
+  const hash = `#${sectionId}`;
+
+  // Define o hash no URL, levando à seção desejada
+  window.location.hash = hash;
 }
 
 $(document).ready(function() {
@@ -122,22 +122,3 @@ function hidePopup(){
   document.getElementById("popup_container").style.display="none";      
 }
 
-(function ($) {
-  // Acc
-    $(document).on("click", ".naccs .menu div", function() {
-      var numberIndex = $(this).index();
-
-      if (!$(this).is("active")) {
-          $(".naccs .menu div").removeClass("active");
-          $(".naccs ul li").removeClass("active");
-
-          $(this).addClass("active");
-          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
-
-          var listItemHeight = $(".naccs ul")
-            .find("li:eq(" + numberIndex + ")")
-            .innerHeight();
-          $(".naccs ul").height(listItemHeight + "px");
-        }
-    });
-  })(window.jQuery);
