@@ -63,38 +63,6 @@
     
 <div class="container py-2">
       <h1 class="text-center mb-3">Nossos Docentes</h1>
-      <div class="row align-items-center">
-        <div class="col-2">
-            <a href="#" class="carousel-link carousel-links-teachers" data-slide-to="0">
-                <img src="//placehold.it/150x100" alt="Imagem 1">
-            </a>
-        </div>
-        <div class="col-2">
-            <a href="#" class="carousel-link carousel-links-teachers" data-slide-to="1">
-                <img src="img/takahiroHoshikawa.png" alt="Imagem 2">
-            </a>
-        </div>
-        <div class="col-2">
-            <a href="#" class="carousel-link carousel-links-teachers" data-slide-to="2">
-                <img src="img/kazuhiroTanaka.jpg" alt="Imagem 3">
-            </a>
-        </div>
-        <div class="col-2">
-            <a href="#" class="carousel-link carousel-links-teachers" data-slide-to="3">
-                <img src="img/rikisaiMiyajima.jpg" alt="Imagem 3">
-            </a>
-        </div>
-        <div class="col-2">
-            <a href="#" class="carousel-link carousel-links-teachers" data-slide-to="4">
-                <img src="img/kojiIwashina.jpg" alt="Imagem 3">
-            </a>
-        </div>
-        <div class="col-2">
-            <a href="#" class="carousel-link carousel-links-teachers" data-slide-to="5">
-                <img src="img/wakakoTakamatsu.jpg" alt="Imagem 3">
-            </a>
-        </div>
-      </div>
       <div class="row align-items-center teachers-section mt-5">
         <div class="col-auto">
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -145,7 +113,7 @@
                           </div>
                           <div class="col-sm-12 col-md-6">
                               <h2>Kazuhiro Tanaka</h2>
-                              <span class="course-teacher d-block">Curso de Yakitori, Curso Completo</span>
+                              <span class="course-teacher d-block">Curso de Yakitori - Curso Completo</span>
                               <ol>
                                 <li>
                                   Empregado por 11 anos como chef de culinária japonesa e kaiseki no "Arima Grand Hotel" e "Japanese Cuisine Yuki" na empresa NakanoBo.
@@ -485,42 +453,9 @@
           <label for="email2" class="form-label">Email:</label>
           <input type="text" class="form-control" id="email2" name="email" placeholder="Digite seu melhor e-mail">
         </div>
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div class="mb-3">
-              <label for="select" class="form-label">Gênero</label>
-              <select class="d-block form-control" id="select" name="gender" required>
-                <option value="" disabled selected>Selecione...</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Feminino">Feminino</option>
-                <option value="Outro">Outro</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="mb-3">
-              <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-              <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
-            </div>
-          </div>
-        </div>
         <div class="mb-3">
-          <label for="" class="form-label">Endereço:</label>
-          <input type="text" class="form-control" placeholder="Endereço" id="" name="endereco" required>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div class="mb-3">
-              <label for="" class="form-label">Estado:</label>
-              <input type="text" class="form-control" placeholder="Estado" id="" name="estado" required>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="mb-3">
-              <label for="" class="form-label">Cidade:</label>
-              <input type="text" class="form-control" placeholder="Cidade" id="" name="cidade" required>
-            </div>
-          </div>
+          <label for="telefone" class="form-label">Número de Telefone:</label>
+          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(xx)xxxxx-xxxx">
         </div>
         <div class="mb-3">
           <label class="form-label">Escolha o curso: (É possível escolher mais de 1 curso)</label>
@@ -561,36 +496,7 @@
 </div>    
 
 <!-- EmailJS -->
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-  (function(){
-     emailjs.init("c02951siHfoTYbeIq");
-  })();
-  // Seleciona os elementos das setas de navegação
-  const prevButton = document.getElementById("prevSlide");
-  const nextButton = document.getElementById("nextSlide");
-
-  // Adiciona um ouvinte de evento de clique à seta anterior
-  prevButton.addEventListener("click", function() {
-      $("#carouselExampleControls").carousel("prev");
-  });
-
-  // Adiciona um ouvinte de evento de clique à seta seguinte
-  nextButton.addEventListener("click", function() {
-      $("#carouselExampleControls").carousel("next");
-  });
-  // Seleciona os elementos das imagens representativas e adiciona ouvintes de evento de clique a eles
-  const carouselLinks = document.querySelectorAll(".carousel-link");
-        carouselLinks.forEach(function(link) {
-            link.addEventListener("click", function(event) {
-                event.preventDefault();
-                const slideIndex = parseInt(link.getAttribute("data-slide-to"));
-                $("#carouselExampleControls").carousel(slideIndex);
-            });
-        });
-</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <!-- jQuery links-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

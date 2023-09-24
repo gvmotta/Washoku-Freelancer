@@ -76,14 +76,10 @@ const handleSubmit = (event) => {
   const dataAtual = data.toLocaleDateString('pt-BR', opcoes);
   const name = document.querySelector('input[name=name]').value;
   const email = document.querySelector('input[name=email]').value;
-  const date = document.querySelector('input[name=dataNascimento]').value;
-  const endereco = document.querySelector('input[name=endereco]').value;
-  const estado = document.querySelector('input[name=estado]').value;
-  const cidade = document.querySelector('input[name=cidade]').value;
-  const gender = document.querySelector('select[name=gender]').value;
   const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
   const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
   const textareaElement = document.querySelector('textarea[name=mensagem]').value;
+  const numeroTelefone = document.querySelector('input[type=tel]').value;
   
   var params = {
     name: document.getElementById('nome2').value,
@@ -91,7 +87,7 @@ const handleSubmit = (event) => {
     message: document.getElementById('mensagem').value
   };
   
-  const serviceID = "service_dgzob2h";
+  /* const serviceID = "service_dgzob2h";
   const templateID = "template_kag5chc";
   
   emailjs.send(serviceID, templateID, params).then(
@@ -101,7 +97,7 @@ const handleSubmit = (event) => {
       document.getElementById('mensagem').value = "";
       console.log(res);
     }
-  )
+  ) */
 
   fetch('https://api.sheetmonkey.io/form/k96idJaL2gDuLeu1Ue65L7', {
     method: 'post',
@@ -109,8 +105,7 @@ const handleSubmit = (event) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ 'Horário': (dataAtual+horaAtual), Nome: name, Email: email, 'Data de Nascimento': date,
-    'Endereço': endereco, Estado: estado, Cidade: cidade, 'Gênero': gender, 
+    body: JSON.stringify({ 'Horário': (dataAtual+horaAtual), Nome: name, Email: email, 'Número de Telefone:': numeroTelefone,
     Cursos: selectedValues, 'Conte um pouco:': textareaElement
   }),
   }).then(() => removeLoading());
@@ -122,3 +117,28 @@ function hidePopup(){
   document.getElementById("popup_container").style.display="none";      
 }
 
+(function(){
+  emailjs.init("c02951siHfoTYbeIq");
+})();
+// Seleciona os elementos das setas de navegação
+const prevButton = document.getElementById("prevSlide");
+const nextButton = document.getElementById("nextSlide");
+
+// Adiciona um ouvinte de evento de clique à seta anterior
+prevButton.addEventListener("click", function() {
+   $("#carouselExampleControls").carousel("prev");
+});
+
+// Adiciona um ouvinte de evento de clique à seta seguinte
+nextButton.addEventListener("click", function() {
+   $("#carouselExampleControls").carousel("next");
+});
+// Seleciona os elementos das imagens representativas e adiciona ouvintes de evento de clique a eles
+const carouselLinks = document.querySelectorAll(".carousel-link");
+     carouselLinks.forEach(function(link) {
+         link.addEventListener("click", function(event) {
+             event.preventDefault();
+             const slideIndex = parseInt(link.getAttribute("data-slide-to"));
+             $("#carouselExampleControls").carousel(slideIndex);
+         });
+     });
