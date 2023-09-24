@@ -120,19 +120,7 @@ function hidePopup(){
 (function(){
   emailjs.init("c02951siHfoTYbeIq");
 })();
-// Seleciona os elementos das setas de navegação
-const prevButton = document.getElementById("prevSlide");
-const nextButton = document.getElementById("nextSlide");
 
-// Adiciona um ouvinte de evento de clique à seta anterior
-prevButton.addEventListener("click", function() {
-   $("#carouselExampleControls").carousel("prev");
-});
-
-// Adiciona um ouvinte de evento de clique à seta seguinte
-nextButton.addEventListener("click", function() {
-   $("#carouselExampleControls").carousel("next");
-});
 // Seleciona os elementos das imagens representativas e adiciona ouvintes de evento de clique a eles
 const carouselLinks = document.querySelectorAll(".carousel-link");
      carouselLinks.forEach(function(link) {
@@ -142,3 +130,24 @@ const carouselLinks = document.querySelectorAll(".carousel-link");
              $("#carouselExampleControls").carousel(slideIndex);
          });
      });
+
+     var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('slick-slide00');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+console.log(img, modal, modalImg, captionText);
+function opa(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}

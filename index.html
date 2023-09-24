@@ -426,14 +426,21 @@
   <div class="galeria m-auto">
     <h2 class="text-center mb-5">Galeria de Imagens</h2>
     <div class="galeria-img">
-      <img class="ms-1 me-1" src="img/carousel2.png" alt="">
-      <img class="ms-1 me-1" src="img/carousel3.png" alt="">
-      <img class="ms-1 me-1" src="img/gallery-1.jpg" alt="">
-      <img class="ms-1 me-1" src="img/gallery-2.jpg" alt="">
-      <img class="ms-1 me-1" src="img/gallery-3.jpg" alt="">
-      <img class="ms-1 me-1" src="img/gallery-4.jpg" alt="">
+      <img class="ms-1 me-1 img-gallery" onclick="opa();" id="slick-slide00" src="img/carousel2.png" alt="Opa">
+      <img class="ms-1 me-1 img-gallery" src="img/carousel3.png" alt="">
+      <img class="ms-1 me-1 img-gallery" src="img/gallery-1.jpg" alt="">
+      <img class="ms-1 me-1 img-gallery" src="img/gallery-2.jpg" alt="">
+      <img class="ms-1 me-1 img-gallery" src="img/gallery-3.jpg" alt="">
+      <img class="ms-1 me-1 img-gallery" src="img/gallery-4.jpg" alt="">
     </div>
   </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
 </div>
 
 <div class="container">
@@ -505,7 +512,6 @@
 <!-- Bootstrap Links -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="js/custom.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
