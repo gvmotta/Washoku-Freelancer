@@ -351,6 +351,9 @@ p, span, form, label, input, small, li, ul, button, a {
     .image-form {
       margin-bottom: 20px!important;
     }
+    img.d-block.img-fluid {
+      margin-bottom: 20px!important;
+    }
 }
 
 .image-form img {
@@ -504,6 +507,12 @@ textarea {
   .card-courses {
     margin: 0 auto 20px!important;
   }
+  .h1left {
+    margin-left: 35px; 
+  }
+  .h1right {
+    margin-right: 35px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -635,7 +644,6 @@ img.d-block.img-fluid {
 }
 
 #carouselExampleControls {
-  max-height: 500px; /* Defina a altura máxima desejada */
   overflow: hidden; /* Oculte o conteúdo que exceda a altura máxima */
 }
 /* Estilos para os slides */
