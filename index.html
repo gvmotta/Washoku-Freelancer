@@ -462,7 +462,7 @@
         </div>
         <div class="mb-3">
           <label for="telefone" class="form-label">Número de Telefone:</label>
-          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(xx)xxxxx-xxxx">
+          <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="15" onkeyup="handlePhone(event)" placeholder="(xx)xxxxx-xxxx">
         </div>
         <div class="mb-3">
           <label class="form-label">Escolha o curso: (É possível escolher mais de 1 curso)</label>
@@ -552,6 +552,18 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
   modal.style.display = "none";
+}
+const handlePhone = (event) => {
+  let input = event.target
+  input.value = phoneMask(input.value)
+}
+
+const phoneMask = (value) => {
+  if (!value) return ""
+  value = value.replace(/\D/g,'')
+  value = value.replace(/(\d{2})(\d)/,"($1) $2")
+  value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+  return value
 }
 </script>
 
