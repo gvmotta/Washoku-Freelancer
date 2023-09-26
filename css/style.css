@@ -96,7 +96,7 @@ p, span, form, label, input, small, li, ul, button, a {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 50px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -472,6 +472,9 @@ textarea {
   .logo-text {
     font-size: 30px;
   }
+  .bold-head {
+    font-size: 38px!important;
+  }
   .hero-header p {
     font-size: 14px;
   }
@@ -637,6 +640,10 @@ img.d-block.img-fluid {
 
 .carousel-item li {
   list-style-type: disc;
+}
+
+.hiroakiUto {
+  height: 400px!important;
 }
 
 .teachers-section .col-auto .h1:hover {
