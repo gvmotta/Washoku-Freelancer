@@ -34,7 +34,7 @@ p, span, form, label, input, small, li, ul, button, a {
 
 .hero-header {
   background-repeat: no-repeat!important;
-  background: radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(15,15,15,1) 100%),
+  background: radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(15, 15, 15, 1) 100%),
   url(../img/background-hero1.jpg);
   font-family: 'MrsEavesSmallCapsRoman';
   font-weight: 300;
@@ -462,6 +462,12 @@ textarea {
   .card-icon {
     font-size: 80px;
   }
+  .card {
+    margin: 10px;
+  }
+.carousel-item .pl-0 ol {
+    padding-inline-start: 40px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -487,10 +493,11 @@ textarea {
   .card-courses {
     margin: 0 auto 20px!important;
   }
-}
-@media (min-width: 768px) {
-  .card {
-    margin: 10px;
+  .carousel-item ol {
+    padding-inline-start: 15px!important;
+  }
+  .mt-10px {
+    margin-top: -12px;
   }
 }
 
@@ -638,12 +645,17 @@ img.d-block.img-fluid {
   color: #fff;
 }
 
+.carousel-item ol {
+  padding-inline-start: 0px;
+}
+
 .carousel-item li {
   list-style-type: disc;
 }
 
 .hiroakiUto {
   height: 400px!important;
+  max-width: 150%;
 }
 
 .teachers-section .col-auto .h1:hover {
