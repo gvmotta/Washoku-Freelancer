@@ -651,6 +651,10 @@ img.d-block.img-fluid {
   max-width: 150%;
 }
 
+.ceo div li {
+  list-style-type: disc;
+}
+
 .teachers-section .col-auto .h1:hover {
   color: var(--red-light);
 }
