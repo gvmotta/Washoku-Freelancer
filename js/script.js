@@ -130,4 +130,32 @@ const carouselLinks = document.querySelectorAll(".carousel-link");
              $("#carouselExampleControls").carousel(slideIndex);
          });
      });
- 
+ // Selecione todos os elementos com a classe "imagem"
+var modal = document.getElementById('myModal');
+var imagens = document.querySelectorAll(".img-gallery");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+// Função para abrir o modal e definir a imagem e o texto do caption
+function abrirModal(event) {
+    modal.style.display = "block";
+    modalImg.src = event.target.src;
+    captionText.innerHTML = event.target.alt;
+}
+
+// Adicione um ouvinte de evento de clique a cada imagem
+imagens.forEach(function(imagem) {
+    imagem.addEventListener("click", abrirModal);
+});
+
+// Fecha o popup
+function fecharPopup() {
+    modal.style.display = "none";
+}
+
+// Fecha o popup quando o usuário clica fora da div do popup
+window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        fecharPopup();
+    }
+});
