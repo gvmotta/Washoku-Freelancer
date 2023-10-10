@@ -11,6 +11,14 @@
 :root {
   --red-principal: #8B0000;
   --red-light: #b30000;
+  --fonte-MrsEaves: 'MrsEavesSmallCapsRoman';
+  --fonte-Roboto: 'Roboto', sans-serif;
+}
+.Roboto {
+  font-family: var(--fonte-Roboto)!important;
+}
+.MrsEaves {
+  font-family: var(--fonte-MrsEaves);
 }
 
 * {
@@ -26,6 +34,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'MrsEavesSmallCapsRoman'!important;
+}
+h4 {
+  font-size: 1.3rem!important;
 }
 
 p, span, form, label, input, small, li, ul, button, a {
@@ -152,6 +163,7 @@ p, span, form, label, input, small, li, ul, button, a {
     width: 100%;
   }
 }
+
 
 .text-logo h3 {
     font-size: 20px;
@@ -347,6 +359,15 @@ p, span, form, label, input, small, li, ul, button, a {
     img.d-block.img-fluid {
       margin-bottom: 20px!important;
     }
+}
+@media (max-width: 441px) {
+  .next-line {
+    display: flex;
+    float: left;
+    justify-content: center;
+    height: 35px;
+    margin-right: 10px!important;
+  }
 }
 
 .image-form img {
@@ -629,13 +650,17 @@ img.d-block.img-fluid {
   padding: .5rem 1.5rem;
   width: fit-content;
   border-radius: 20px;
-  margin: .5rem 0 .8rem;
+  margin: .5rem 0 .8rem 0;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
   letter-spacing: .5px;
   color: #fff;
+}
+
+.list-wakako {
+  list-style-type: disc;
 }
 
 .carousel-item ol {
@@ -653,6 +678,16 @@ img.d-block.img-fluid {
 
 .ceo div li {
   list-style-type: disc;
+}
+.ceo .principal {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.svg-instructors {
+  filter: invert(100%);
+  fill: white;
+  margin-right: 5px;
 }
 
 .teachers-section .col-auto .h1:hover {
