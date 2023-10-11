@@ -359,8 +359,11 @@ p, span, form, label, input, small, li, ul, button, a {
     img.d-block.img-fluid {
       margin-bottom: 20px!important;
     }
+    .course-instructor {
+      margin: 0 auto 1rem!important;
+    }
 }
-@media (max-width: 441px) {
+@media (max-width: 397px) {
   .next-line {
     display: flex;
     float: left;
