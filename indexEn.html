@@ -469,15 +469,15 @@
       method="POST">
         <div class="mb-3">
           <label for="nome2" class="form-label">Name:</label>
-          <input type="text" class="form-control" id="nome2" name="name" placeholder="Enter your full name">
+          <input type="text" class="form-control" id="nome2" name="name" placeholder="Enter your full name" required>
         </div>
         <div class="mb-3">
           <label for="email2" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="email2" name="email" placeholder="Enter your best email">
+          <input type="email" class="form-control" id="email2" name="email" placeholder="Enter your best email" required>
         </div>
         <div class="mb-3">
           <label for="telefone" class="form-label">Phone number:</label>
-          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Phone Number">
+          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Phone Number" required>
         </div>
         <div class="mb-3">
           <label class="form-label">Choose the course: (It's possible to choose more than 1 course)</label>
@@ -502,6 +502,7 @@
           <label for="mensagem" class="form-label">Tell us a little about your expectations for the course:</label>
           <textarea class="form-control-lg" id="mensagem" placeholder="Tell us..." name="mensagem" rows="4" required></textarea>
         </div>
+        <input type="hidden" class="form-control" id="version" name="version" value="English-Global">
         <button type="submit" class="btn btn-primary mb-5" id="planilha">I want more information!</button>
       </form>
     </div>
@@ -518,7 +519,9 @@
   </div>    
 </div>    
 
-<script>feather.replace();</script>
+<script>
+  feather.replace();
+</script>
 <!-- EmailJS -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <!-- jQuery links-->

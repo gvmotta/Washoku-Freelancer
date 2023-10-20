@@ -80,6 +80,7 @@ const handleSubmit = (event) => {
   const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
   const textareaElement = document.querySelector('textarea[name=mensagem]').value;
   const numeroTelefone = document.querySelector('input[type=tel]').value;
+  const version = document.querySelector('input[name=version]').value;
   
   var params = {
     name: document.getElementById('nome2').value,
@@ -87,7 +88,7 @@ const handleSubmit = (event) => {
     message: document.getElementById('mensagem').value
   };
   
-  /* const serviceID = "service_dgzob2h";
+  const serviceID = "service_dgzob2h";
   const templateID = "template_kag5chc";
   
   emailjs.send(serviceID, templateID, params).then(
@@ -97,7 +98,7 @@ const handleSubmit = (event) => {
       document.getElementById('mensagem').value = "";
       console.log(res);
     }
-  ) */
+  )
 
   fetch('https://api.sheetmonkey.io/form/k96idJaL2gDuLeu1Ue65L7', {
     method: 'post',
@@ -105,8 +106,8 @@ const handleSubmit = (event) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ 'Horário': (dataAtual+horaAtual), Nome: name, Email: email, 'Número de Telefone:': numeroTelefone,
-    Cursos: selectedValues, 'Conte um pouco:': textareaElement
+    body: JSON.stringify({ 'Time (Brazil)': (dataAtual+' ' +horaAtual), Name: name, Email: email, 'Phone number:': numeroTelefone,
+    Courses: selectedValues, 'Tell us a little:': textareaElement, Version: version
   }),
   }).then(() => removeLoading());
   document.getElementById("popup_container").style.display="block";  

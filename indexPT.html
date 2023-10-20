@@ -461,15 +461,15 @@
       method="POST">
         <div class="mb-3">
           <label for="nome2" class="form-label">Nome:</label>
-          <input type="text" class="form-control" id="nome2" name="name" placeholder="Digite seu nome completo">
+          <input type="text" class="form-control" id="nome2" name="name" placeholder="Digite seu nome completo" required>
         </div>
         <div class="mb-3">
           <label for="email2" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="email2" name="email" placeholder="Digite seu melhor Email">
+          <input type="email" class="form-control" id="email2" name="email" placeholder="Digite seu melhor Email" required>
         </div>
         <div class="mb-3">
           <label for="telefone" class="form-label">Telefone:</label>
-          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Número de telefone">
+          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Número de telefone" required>
         </div>
         <div class="mb-3">
           <label class="form-label">Escolha o curso: (É possível escolher mais de 1)</label>
@@ -494,6 +494,7 @@
           <label for="mensagem" class="form-label">Conte-nos um pouco sobre suas espectativas com o curso:</label>
           <textarea class="form-control-lg" id="mensagem" placeholder="Conte-nos" name="mensagem" rows="4" required></textarea>
         </div>
+        <input type="hidden" class="form-control" id="version" name="version" value="Portuguese-Brasil">
         <button type="submit" class="btn btn-primary mb-5" id="planilha">Quero mais informações!</button>
       </form>
     </div>
