@@ -81,6 +81,7 @@ const handleSubmit = (event) => {
   const textareaElement = document.querySelector('textarea[name=mensagem]').value;
   const numeroTelefone = document.querySelector('input[type=tel]').value;
   const version = document.querySelector('input[name=version]').value;
+  const country = document.querySelector('input[name=country]').value;
   
   var params = {
     name: document.getElementById('nome2').value,
@@ -107,7 +108,7 @@ const handleSubmit = (event) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ 'Time (Brazil)': (dataAtual+' ' +horaAtual), Name: name, Email: email, 'Phone number:': numeroTelefone,
-    Courses: selectedValues, 'Tell us a little:': textareaElement, Version: version
+    Courses: selectedValues, 'Tell us a little:': textareaElement, Version: version, Country: country
   }),
   }).then(() => removeLoading());
   document.getElementById("popup_container").style.display="block";  
