@@ -34,6 +34,7 @@ body {
 
 .bold {
   font-weight: bold;
+  display: contents;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -350,7 +351,9 @@ p, span, form, label, input, small, li, ul, button, a {
 .courses {
   line-height: 1.3;
 }
-
+.courses p {
+  margin-bottom: .7rem;
+}
 .courses   li {
     margin-left: 20px;
   }
@@ -461,7 +464,7 @@ textarea {
 }
 
 .mini-card-title {
-  margin: 0 auto;
+  margin: 20px auto 10px;
   font-family: 'Roboto', sans-serif!important;
   font-weight: 500;
   font-size: 1.1rem!important;
