@@ -717,3 +717,15 @@ img.d-block.img-fluid {
 .carousel-item {
   overflow: visible; /* Faça com que o conteúdo excedente seja visível */
 }
+.fa-angle-left, 
+.fa-angle-right {
+  font-size: 25px;
+  color: rgb(218, 197, 134);
+  padding: 0 3px;
+}
+.course-sample{
+  display: flex;
+  align-items: center;
+  color: rgb(218, 197, 134);
+  font-size: 20px;
+}
