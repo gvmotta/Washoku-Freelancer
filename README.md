@@ -1,4 +1,4 @@
-<center># Washoku Freelancer Project</center>
+<center> # Washoku Freelancer Project</center>
 
 ![Home page](img/markdownPhoto.png "Home Page")
 ### Washoku (English)
