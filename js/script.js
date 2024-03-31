@@ -1,4 +1,6 @@
-$('.galeria-img').slick({
+console.log("Ola");
+$(document).ready(function(){
+  $('.galeria-img').slick({
     infinite: true,
     dots: true,
     autoplay: true,
@@ -35,6 +37,8 @@ $('.galeria-img').slick({
       // instead of a settings object
     ]
   });
+  
+});
 
 function redirectToSection(sectionId) {
   // Cria o hash a partir do ID da seção
